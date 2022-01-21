@@ -494,7 +494,7 @@ impl Default for AuroraRunner {
         } else {
             panic!("AuroraRunner requires mainnet-test or testnet-test feature enabled.")
         };
-        let mut wasm_config = VMConfig::default();
+        let mut wasm_config = VMConfig::test();
         // See https://github.com/near/nearcore/pull/4979/
         wasm_config.regular_op_cost = 2207874;
 

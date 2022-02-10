@@ -3,7 +3,7 @@ NEAR  = near
 FEATURES = mainnet
 # More strict clippy rules
 FEATURES_CLIPPY = contract
-ADDITIONAL_FEATURES = ,noop-gas
+ADDITIONAL_FEATURES =
 
 ifeq ($(evm-bully),yes)
   ADDITIONAL_FEATURES := $(ADDITIONAL_FEATURES),evm_bully

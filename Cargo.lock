@@ -1389,7 +1389,7 @@ checksum = "77f3309417938f28bf8228fcff79a4a37103981e3e186d2ccd19c74b38f4eb71"
 [[package]]
 name = "evm"
 version = "0.33.1"
-source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#ff3779b80d41c407e15e817f9ed63b3c67ef85c7"
+source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#6a6375e45b907db7ae9929a5d027cb9850fdf3df"
 dependencies = [
  "auto_impl",
  "environmental",
@@ -1409,7 +1409,7 @@ dependencies = [
 [[package]]
 name = "evm-core"
 version = "0.33.0"
-source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#ff3779b80d41c407e15e817f9ed63b3c67ef85c7"
+source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#6a6375e45b907db7ae9929a5d027cb9850fdf3df"
 dependencies = [
  "funty",
  "parity-scale-codec",
@@ -1421,7 +1421,7 @@ dependencies = [
 [[package]]
 name = "evm-gasometer"
 version = "0.33.0"
-source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#ff3779b80d41c407e15e817f9ed63b3c67ef85c7"
+source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#6a6375e45b907db7ae9929a5d027cb9850fdf3df"
 dependencies = [
  "environmental",
  "evm-core",
@@ -1432,7 +1432,7 @@ dependencies = [
 [[package]]
 name = "evm-runtime"
 version = "0.33.0"
-source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#ff3779b80d41c407e15e817f9ed63b3c67ef85c7"
+source = "git+https://github.com/olonho/sputnikvm.git?branch=better_interpreter#6a6375e45b907db7ae9929a5d027cb9850fdf3df"
 dependencies = [
  "auto_impl",
  "environmental",

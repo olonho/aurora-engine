@@ -1,7 +1,8 @@
 use aurora_engine_types::types::EthGas;
-use aurora_engine_types::{BTreeMap, H256};
+use aurora_engine_types::{BTreeMap, H256, U256};
 use evm_core::Opcode;
 use std::ops::Index;
+use std::ptr::copy_nonoverlapping;
 
 /// Depth of a log.
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
@@ -88,6 +89,18 @@ impl LogStack {
 impl From<&[H256]> for LogStack {
     fn from(stack: &[H256]) -> Self {
         let vec = stack.iter().map(|bytes| bytes.0).collect();
+        Self(vec)
+    }
+}
+
+impl From<&[U256]> for LogStack {
+    fn from(stack: &[U256]) -> Self {
+        let vec = stack.iter().map(|bytes| unsafe {
+            let mut elem = [0u8; 32];
+            // TODO: maybe endianness conversion?
+            copy_nonoverlapping(bytes.0.as_ptr(), elem.as_mut_ptr() as *mut u64, 4);
+            elem
+        }).collect();
         Self(vec)
     }
 }

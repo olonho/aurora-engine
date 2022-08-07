@@ -1,3 +1,5 @@
+extern crate core;
+
 pub mod sputnik;
 pub mod types;
 
